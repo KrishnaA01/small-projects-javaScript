@@ -1,3 +1,5 @@
+/**
+
 let input = document.querySelector('input');
 let button = document.querySelector('button');
 
@@ -18,3 +20,35 @@ function GeneratePass(length=7){
 button.addEventListener('click', ()=>{
     input.value = GeneratePass(7);
 })
+ */
+
+//? lexical scopes and closures
+
+function sum (){
+    let a = 5;
+    let b = 6;
+    function doubleSum (){
+        console.log(a+b);
+    }
+    doubleSum ()
+}
+
+sum();
+
+
+
+
+function subt (){
+    let b = 15;
+    if (true){
+       let c = 200;
+        console.log(b);
+    }
+    console.log(c); //? c is not defined
+}
+
+subt();
+
+
+
+
